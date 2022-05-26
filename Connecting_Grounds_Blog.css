@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* ADDING OUR OWN FONTS*/
+@font-face {
+    font-family: 'SK-Modernist-Mono';
+    src: url(fonts/Sk-Modernist-Mono.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'SK-Modernist-Bold';
+    font-weight: bold;
+    src: url(fonts/Sk-Modernist-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Aeonik-Regular';
+    src: url(fonts/Aeonik-Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Magilio';
+    src: url(fonts/MagilioRegular.ttf) format("truetype");
+    
+}
+
+@font-face {
+    font-family: 'Halyard Display Book';
+    src: url(fonts/Halyard-Display-Book.ttf) format("truetype");
+   
+}
+
+/*navigation box*/
+nav{
+    
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: 1s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+/*logo(left) part of the nav box*/
+nav #middle, #middlesticky{
+    width: 33%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#middlesticky{
+    display: none;
+}
+
+/*menu(right) part of the nav box*/
+nav #rgt1, #lft, #rgt2, #lft2{
+    width: 33%;
+    font-family:'Halyard Display';
+    font-size: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+#rgt1{
+    margin-right: 40px;
+}
+
+#lft{
+    margin-left: 40px;
+}
+
+#lft a{
+    text-decoration: none;
+    color: black;
+}
+
+.dropbtn img{
+    padding-left: 5px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+.dropdown .dropbtn {
+    font-size: 1vw;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+   
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    
+  }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 5px 9px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+.sticky{
+    background-color: white;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+}
+
+.sticky .dropdown-content{
+    background-color: white;
+}
+
+.sticky #middlesticky{
+    display: flex;
+}
+
+.sticky #middle{
+    display: none;
+}
+
+
+/*  
+    navigation link animation  
+    code from:https://github.com/kevin-powell/fun-with-transforms-and-transform-origin/blob/master/css/main.css  
+    lines: 7-35
+*/
+.fancy-link {
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .fancy-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    transition: -webkit-transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  }
+  
+  .fancy-link:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+
+
+/*text edditing for the menu*/
+nav #rgt1 a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Events headline design*/
+.headline{
+    padding-top: 200px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 120px;
+}
+
+.headline h1{
+    font-weight: normal;
+    font-family: 'Magilio';
+    text-align:center;
+    font-size: 6vw;
+}
+
+.headline p{
+    font-family: 'Halyard Display Book';
+    text-align: center;
+    font-size: 2vw;
+}
+
+
+/*filter and search box*/
+.filterandsearch{
+    width: 87%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*search box design*/
+.searchbox{
+    width: 15%;
+    
+}
+
+.searchbox input{
+    background: #EFEFEF;
+    color: black;
+    border-radius: 10px;
+    border-style: hidden;
+    padding: 10px;
+}
+
+/*filter container design*/
+.filtercontainer{
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Halyard Display';
+    
+    
+}
+
+.filtercontainer p{
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.filtercontainer button{
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: auto;
+    margin-top: 13px;
+    border-style: hidden;
+    background-color: white;
+    
+    color: #707070;
+    cursor: pointer;
+    
+    
+}
+
+
+/*a style change of a filter button when you press it*/
+.filtercontainer button.active{
+    font-weight: bold;
+    color: black;
+}
+
+/*blogs design*/
+.box{
+    
+    margin-top: 30px;
+    display: flex;
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagesection{
+    width: 50%;
+    object-fit: contain;
+}
+
+.box img, .box iframe{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.box p,.box h1,.bt{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box p, h1{
+    font-family: 'Halyard Display'
+}
+
+.box h1{
+    font-weight: normal;
+    font-size: 2.5vw;
+}
+
+.box p{
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+}
+
+.textsection{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+iframe{
+    overflow: hidden;
+    border-style: hidden;
+}
+
+.description p{
+    font-family: 'Halyard Display Book';
+    margin-bottom: 0px;
+}
+
+.bt{
+    padding-top: 30px;
+}
+
+.textsection{
+    border-top-left-radius: 20px;
+    color: black;
+    background-color: #EFEFEF;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textsection button{
+    font-family:'Halyard Display';
+    color:white;
+    border-style: solid;
+    border-color:#7FA285; 
+    padding: 10px;
+    background-color:#7FA285 ;
+    width: 25%;
+    border-radius: 20px;
+}
+
+.textsection button:hover{
+    color:#7FA285;
+    background-color:white;
+    border-color: #7FA285;
+    
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*hide not selected elements*/
+.filterDiv, .filterDiv2{
+    display: none;
+}
+
+
+/*a section that is added when you press on a filter*/
+.show{
+    display: flex;
+    transition: 0.5s;
+}
+
+.beanjamin{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.beanjamin p{
+    margin-left: 50px;
+    font-family: 'Halyard Display Book';
+    font-size: 1.5vw;
+    width: 30%;
+}
+
+
+/*footer*/
+footer{
+    margin-top: 100px;
+    padding: 50px;
+    font-family: 'Halyard Display Book';
+    color: #EAE9E5;
+   
+   
+    
+    background-color: #7FA285;
+    text-decoration: none;
+}
+
+footer h1{
+    font-weight: normal;
+}
+
+.bigfooter{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    
+    align-content: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #EAE9E5;
+}
+
+.aboutus{
+    width: 40%;
+}
+
+.help{
+    padding-left: 150px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socialmedia{
+    width: 30%;
+    display: flex;
+    padding-left: 150px;
+    flex-direction: column;
+}
+
+.osm{
+   
+    display: flex;
+    align-items: center;
+    
+    padding-bottom: 5px;
+    
+}
+
+.osm p{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+}

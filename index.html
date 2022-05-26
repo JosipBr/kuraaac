@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Connecting_Grounds_Blog.css">
+    <link rel="stylesheet" href="https://use.typekit.net/esl4dht.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Grounds Blog</title>
+</head>
+<body>
+    <!--navigation bar-->
+    <nav id="navbar">
+        <div id="lft">
+            <a href="#shop" class="fancy-link">Shop</a>
+            <div class="dropdown">
+                <button class="dropbtn">Resources<img src="images/dropdown.png" alt="dropdown"></button>
+                <div class="dropdown-content">
+                    <a href="faq.html" class="fancy-link">FAQ</a>
+                    <a href="testimonials.html" class="fancy-link">Testimonials</a>
+                    <a href="#tutorials" class="fancy-link">Tutorials</a>
+                </div>
+            </div>
+            <a href="Connecting_Grounds_Blog.html" class="fancy-link">Blog</a>
+        </div>
+
+            
+        <div id="middle">
+            <a id="logo1" href="index.html"><img src="images/logocg.png" alt="logo"></a>
+        </div>
+        <div id="middlesticky">
+            <a id="logo2" href="index.html"><img src="images/logo.png" alt="logo2"></a>
+        </div>
+    
+        <div id="rgt1">
+            <a href="Connecting_Grounds_Events.html" class="fancy-link">Events</a>
+            <a href="#aboutus" class="fancy-link">About us</a>
+            <a href="#contact" class="fancy-link">Contact</a>
+            <a href="#shop"><img src="images/shopping.png" alt="shoppingbag"></a>
+        </div>
+        
+    </nav>
+
+<!--Event title part-->
+<section class="headline">
+    <h1>Blog</h1>
+    <p>Are you interested in finding more about upcycled coffee, tips & tricks, and so many more exciting things? Scroll down and read articles from our blog.</p>
+</section>
+
+<!--Filters and a searchbar-->
+<section class="filterandsearch">
+    
+<section class="filtercontainer">
+    <p>Filters:</p>
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('Tips&Tricks')"> Tips&Tricks</button>
+    <button class="btn" onclick="filterSelection('Health')"> Health</button>
+    <button class="btn" onclick="filterSelection('Food')"> Food</button>
+    <button class="btn" onclick="filterSelection('Vegan')"> Vegan</button>
+    <button class="btn" onclick="filterSelection('DIY')"> DIY</button>
+</section>
+<section class="searchbox">
+        <input type="text" id="searchbar" onkeyup="myFunction()" placeholder="Search...">
+</section>
+</section>
+
+<!--blog post containers-->
+<section class="box filterDiv DIY all">
+    <section class="textsection">
+        <h1 class="title">Body scrub recipe</h1>
+        <p>August 2021, Caroline Pedersten, 5 min</p>
+        <section class="description">
+            <p>The sand-like texture of coffee grounds makes a great exfoliant in homemade scrubs. The grounds work to gently remove dead skin cells, which helps to rejuvenate and boost circulation.</p>
+            <p>Click on the video to see how to make a DIY body scrub at home from spent coffee grounds you would probably throw away. </p>
+        </section>
+        <section class="bt">
+            <button type="submit" onclick="window.location.href='bodyscrubrecipe.html'">Read full recipe</button></section>
+    </section>
+    <section class="imagesection">
+        <iframe src="https://www.youtube.com/embed/_RmOsmKTUlc"></iframe>
+    </section>
+</section>
+
+<section class="box filterDiv Tips&Tricks all">
+    <section class="textsection">
+        <h1 class="title">How to store coffee grounds</h1>
+        <p>October 2021, Caroline Pedersten, 3 min</p>
+        <section class="description">
+            <p>Do you produce coffee waste however you don’t know how to store it before upcycling it?</p>
+            <p>Check out this article to find out.</p>
+        </section>
+        <section class="bt"><button type="submit">Read more</button></section>
+    </section>
+    <section class="imagesection">
+        <img src="images/store.png" alt="workshop2">
+    </section>
+</section>
+
+<section class="beanjamin filterDiv Health Food Vegan">
+    
+    <p><b>No articles? Don’t worry.</b><br> Beanjamin will make sure new content will appear here soon.</p>
+    <img src="images/beanjamin2.png" alt="beanjaming">
+</section>
+
+<footer>
+    <section class="bigfooter">
+        <section class="aboutus">
+            <h1>About us</h1>
+            <p>Our mission is to keep the nutritional value of the spent coffee grounds by upcycling it into food products. We want to be a part of sustainable food transition that doesn’t leave any resources behind, in order to secure the future of coffee and protect the environment from degradation.</p>
+        </section>
+        <section class="help">
+            <h1>Help</h1>
+            <a href="#faq">FAQ</a>
+            <a href="#contactus">Contact us</a>
+            <a href="#termsandconditions">Terms and conditions</a>
+        </section>
+        <section class="socialmedia">
+            <h1>Our social media</h1>
+            <section class="osm">
+                <a href="https://www.instagram.com/connectinggrounds/" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+                <a href="https://www.instagram.com/connectinggrounds/" target="_blank"><p>connectinggrounds</p></a>
+            </section>
+            <section class="osm">
+                <a href="https://www.linkedin.com/company/connecting-grounds/" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/company/connecting-grounds/" target="_blank"><p>Connecting Grounds</p></a>
+            </section>
+            <section class="osm">
+                <a href="mailto:contact@connecting-grounds.com" target="_blank"><img src="images/mail.png" alt="mail"></a>
+                <a href="mailto:contact@connecting-grounds.com" target="_blank"><p>contact@connecting-grounds.com</p></a>
+            </section>
+        </section>
+    </section>
+    </footer>
+
+
+<script src="Connecting_Grounds_Blog.js"></script>
+
+</body>
